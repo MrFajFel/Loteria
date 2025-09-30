@@ -16,8 +16,12 @@ public class Loteria {
     public void losyZwycieskie(ArrayList<Los> pulaNagrod){
         for(int i = 0; i < pulaNagrod.size(); i++){
             if (pulaNagrod.get(i).getWartosc() == zwycieskiLos){
-                System.out.println(pulaNagrod.get(i).kwota*2);
+                pulaNagrod.get(i).setWygrana(true);
+            }
+            else {
+                pulaNagrod.get(i).setWygrana(false);
             }
         }
+        System.out.println("Zwycieski los to: " + zwycieskiLos);
     }
 }
